@@ -1,33 +1,47 @@
-# TeamDMS Troubleshooting Guide
+# AWS Troubleshooting Hub
 
-A comprehensive React-based troubleshooting guide for TeamDMS services with dual-section navigation for SVLS (Serverless) and DMI (Direct Management Interface) troubleshooting.
+A comprehensive React-based troubleshooting platform for AWS services, providing organized access to troubleshooting guides across multiple service categories including DMS, Networking, Analytics, and more.
 
-## Features
+## Overview
 
-- 🎨 Amazon themed design with updated branding
-- 📱 Fully responsive design across all devices
-- ♿ Accessible (WCAG compliant)
-- 🌙 Dark mode support
-- ⚡ Smooth animations and transitions
-- 📊 Interactive collapsible tree structure
-- 🔝 Scroll to top functionality
-- 🚀 Dual-section navigation (SVLS & DMI)
-- 🧹 Optimized codebase with unnecessary files removed
+Built to streamline AWS support workflows, this application provides a centralized hub for accessing troubleshooting documentation across various AWS service categories. The platform features an intuitive service selection interface with detailed troubleshooting guides for each category.
 
-## Recent Updates
-- **Consistent Branding**: All references updated across components and stylesheets
+## Key Features
 
-### Project Cleanup
-- Removed build directory from version control
-- Eliminated excessive test files focused on implementation details
-- Removed unused dependencies (`fast-check`)
-- Cleaned up redundant documentation files
-- Removed project specification files no longer needed for runtime
-- Optimized bundle size and improved performance
+- **Multi-Service Support**: Covers 11+ AWS service categories
+- **Responsive Design**: Works seamlessly across desktop, tablet, and mobile devices  
+- **Interactive Navigation**: Intuitive service selection with visual cards
+- **Search Functionality**: Advanced search with external AWS resource integration
+- **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Modern UI**: Clean, professional interface with smooth animations
 
-## Installation
+## Service Categories
+
+### Available Services
+- **DMS Troubleshooting** - Database Migration Service guides
+- **Networking** - VPC, Load Balancer, and networking solutions
+- **Database** - RDS, Aurora, and database service guides
+- **Analytics** - Data analytics and processing services
+- **Big Data** - Large-scale data processing solutions
+- **Deployment** - CI/CD and deployment automation
+- **Security** - IAM, encryption, and security services
+- **Linux** - Linux system administration and troubleshooting
+- **Windows** - Windows Server and enterprise solutions
+- **SCD** - Storage and content delivery services
+- **Unified Operations** - Monitoring and operations tools
+
+### Specialized Sections
+- **SVLS (Serverless)**: Lambda, API Gateway, Step Functions
+- **DMI (Developer Mobile, Messaging & IoT)**: IoT, messaging, and mobile services
+- **ELB**: Comprehensive load balancer troubleshooting
+
+## Quick Start
 
 ```bash
+# Clone the repository
+git clone <repository-url>
+cd aws-troubleshooting-hub
+
 # Install dependencies
 npm install
 
@@ -36,48 +50,100 @@ npm start
 
 # Build for production
 npm run build
+```
+
+## Development Setup
+
+### Prerequisites
+- Node.js 14+ 
+- npm or yarn package manager
+
+### Local Development
+```bash
+# Install dependencies
+npm install
+
+# Start development server (opens http://localhost:3000)
+npm start
 
 # Run tests
 npm test
+
+# Build production bundle
+npm run build
 ```
 
-## Project Structure
+## Project Architecture
 
 ```
 src/
-├── components/
-│   ├── Header.js          # Updated with amazon-logo className
-│   ├── Node.js            # Interactive tree node component
-│   └── ScrollToTop.js     # Scroll to top functionality
-├── pages/
-│   ├── HomePage.js        # Landing page with section selection
-│   ├── SVLSPage.js        # Serverless troubleshooting section
-│   └── DMIPage.js         # Direct Management Interface section
-├── data/
-│   └── troubleshootingData.js  # Troubleshooting content data
-├── App.js                 # Main routing component
-├── App.css               # Updated with amazon-logo styles
-└── index.js              # Application entry point
+├── components/           # Reusable UI components
+│   ├── EnhancedPageLayout.js  # Main layout wrapper
+│   ├── Header.js             # Page headers
+│   ├── SearchBox.js          # Search functionality
+│   ├── NavigationBar.js      # Top navigation
+│   └── Node.js              # Content tree nodes
+├── pages/               # Route components
+│   ├── HomePage.js      # Service selection hub
+│   ├── DMSPage.js       # DMS service categories
+│   ├── NetworkingPage.js # Networking categories
+│   └── [ServicePages]   # Individual service pages
+├── data/               # Content and configuration
+│   ├── svlsTroubleshootingData.js
+│   ├── elbTroubleshootingData.js
+│   └── troubleshootingData.js
+└── App.js              # Main routing and app structure
 ```
 
-## Navigation
+## Usage
 
-The application features a dual-section structure:
+1. **Service Selection**: Choose from available service categories on the homepage
+2. **Category Navigation**: Browse subcategories within each service area
+3. **Troubleshooting Guides**: Access detailed troubleshooting content with search functionality
+4. **External Resources**: Integrated links to AWS documentation and community resources
 
-- **SVLS (Serverless)**: `/svls` - AWS serverless services troubleshooting
-- **DMI (Direct Management Interface)**: `/dmi` - Amazon Connect and direct management troubleshooting
+## Contributing
 
-## Development
+### Code Style
+- Follow existing component patterns
+- Use functional components with hooks
+- Maintain consistent naming conventions
+- Include proper PropTypes or TypeScript definitions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses React Router for navigation.
+### Adding New Services
+1. Create service page component in `src/pages/`
+2. Add route in `App.js`
+3. Update homepage service list
+4. Create data file if needed
 
-### Available Scripts
+## Technology Stack
 
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
-- `npm run build` - Builds the app for production
-- `npm run eject` - Ejects from Create React App (one-way operation)
+- **React 18** - UI framework
+- **React Router** - Client-side routing
+- **CSS3** - Styling with custom properties and flexbox/grid
+- **Jest & React Testing Library** - Testing framework
 
-## TeamDMS Project
+## Browser Support
 
-This is part of the TeamDMS project suite for comprehensive troubleshooting and management tools.
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+
+## Performance
+
+- Optimized bundle size with code splitting
+- Lazy loading for route components
+- Efficient CSS with minimal unused rules
+- Responsive images and assets
+
+---
+
+*Built for AWS support teams and system administrators*
+
+## Developer
+
+**Developed by [@imujjwal](https://github.com/imujjwal)**
+CSE1 - SVLS
+
+This project was created to streamline AWS troubleshooting workflows and provide centralized access to comprehensive troubleshooting documentation across multiple AWS service categories.

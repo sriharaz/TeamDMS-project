@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders application homepage', () => {
   render(<App />);
-  const headerElement = screen.getByText(/Choose your service category/i);
+  const headerElement = screen.getByText(/AWS Troubleshooting Hub/i);
   expect(headerElement).toBeInTheDocument();
 });

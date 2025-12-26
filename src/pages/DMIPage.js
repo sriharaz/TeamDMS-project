@@ -1,27 +1,20 @@
-import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Node from '../components/Node';
+import EnhancedPageLayout from '../components/EnhancedPageLayout';
 import { troubleshootingData } from '../data/troubleshootingData';
 
 function DMIPage() {
   return (
-    <>
-      <Header />
-      <div className="content-wrapper">
-        <div className="page-navigation">
-          <Link to="/" className="back-button">← Back to Home</Link>
-        </div>
-        <div className="page-title">
-          <h2>DMI - Direct Management Interface</h2>
-          <p>Amazon Connect and direct management troubleshooting guides</p>
-        </div>
-        <div className="mindmap">
-          {troubleshootingData.map((node, index) => (
-            <Node key={node.id} node={node} index={index} />
-          ))}
-        </div>
-      </div>
-    </>
+    <EnhancedPageLayout
+      title=""
+      subtitle=""
+      data={troubleshootingData}
+      backLink="/dms"
+      headerProps={{
+        title: "Developer Mobile, Messaging & IoT (DMI)",
+        subtitle: "Comprehensive troubleshooting guides for DMI services including IoT, Connect, messaging, mobile, and developer tools",
+        logoUrl: "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_REV_SQ.8c88ac215fe4e441dc42865dd6962ed4f444a90d.png",
+        logoAlt: "AWS Developer Mobile, Messaging & IoT Services"
+      }}
+    />
   );
 }
 
