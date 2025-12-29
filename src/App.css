@@ -305,25 +305,6 @@ h1 {
 .node[id*="error"] .node-title span::before,
 .node[id*="refused"] .node-title span::before { content: '⚠️'; }
 
-/* Serverless Service Icons */
-.node[id*="lambda"] .node-title span::before { content: '⚡'; }
-.node[id*="api-gateway"] .node-title span::before { content: '🌐'; }
-.node[id*="step-functions"] .node-title span::before { content: '🔄'; }
-.node[id*="serverless"] .node-title span::before { content: '☁️'; }
-.node[id*="performance"] .node-title span::before { content: '⚡'; }
-.node[id*="monitoring"] .node-title span::before { content: '📊'; }
-.node[id*="debugging"] .node-title span::before { content: '🔍'; }
-.node[id*="cold-start"] .node-title span::before { content: '❄️'; }
-.node[id*="timeout"] .node-title span::before { content: '⏱️'; }
-.node[id*="memory"] .node-title span::before { content: '💾'; }
-.node[id*="permission"] .node-title span::before { content: '🔐'; }
-.node[id*="cors"] .node-title span::before { content: '🔗'; }
-.node[id*="authentication"] .node-title span::before { content: '🔐'; }
-.node[id*="throttling"] .node-title span::before { content: '🚦'; }
-.node[id*="integration"] .node-title span::before { content: '🔗'; }
-.node[id*="state-machine"] .node-title span::before { content: '⚙️'; }
-.node[id*="execution"] .node-title span::before { content: '▶️'; }
-
 /* Service-specific SVLS node IDs with higher specificity */
 .node[id="root"] .node-title span::before { content: '☁️' !important; }
 
@@ -2887,37 +2868,12 @@ header {
   }
 }
 /* Dynamic Quick Links Enhancement */
-.footer-section h4:has(+ ul li a[href]) {
-  position: relative;
-}
-
-.footer-section h4:contains("Quick Links")::after {
-  content: "✨";
-  font-size: 0.8rem;
-  opacity: 0.6;
-  margin-left: 5px;
-}
-
-/* Smooth transition for dynamic link updates */
 .footer-section ul li {
   transition: all 0.3s ease;
 }
 
 .footer-section ul li a {
   transition: all 0.3s ease;
-}
-
-/* Subtle animation for recently updated links */
-@keyframes quickLinkUpdate {
-  0% { background-color: rgba(255, 255, 255, 0.1); }
-  100% { background-color: transparent; }
-}
-
-.footer-section ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  padding: 2px 6px;
-  margin: -2px -6px;
 }
 
 /* Responsive behavior for dynamic links */
